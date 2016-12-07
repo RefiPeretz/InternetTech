@@ -1,6 +1,9 @@
 
 table{
     position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
     width: 90%;
     height: 40%;
     box-shadow: 5px 10px 3px 5px #999;
@@ -18,6 +21,13 @@ th, td {
 th{
     font-weight: 700;
     font-size: 16pt;
+}
+
+body {
+    background-image: url("back.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
 }
 .profileDIv{
     width: 100%;
@@ -42,18 +52,12 @@ th{
     -webkit-animation-name: shake;
     animation-name: shake;
 }
-.summaryNote{
-    padding: 20px;
-    position: relative;
-    color: darkblue;
-    font-size: 15pt;
-}
 
 .rotterLink{
     padding: 2px;
     height: 60%;
     width: 80%;
-    color: violet;
+    color: black;
 }
 
 .tableTitle{
