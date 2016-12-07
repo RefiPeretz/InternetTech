@@ -7,7 +7,7 @@ table{
     width: 90%;
     height: 40%;
     box-shadow: 5px 10px 3px 5px #999;
-    background: rgba(22,56,187,0.2);
+    background: rgba(200,200,200,0.5);
 }
 th, td {
     border: 1px solid black;
@@ -53,10 +53,10 @@ body {
     animation-name: shake;
 }
 
-.rotterLink{
+.nineGag{
     padding: 2px;
-    height: 60%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
     color: black;
 }
 
