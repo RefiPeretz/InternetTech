@@ -1,0 +1,22 @@
+
+body {
+
+    font-size: 24px;
+    color: white;
+    font-family: calibri, arial;
+    line-height: 1.5;
+    background-image: url("welcome.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+#login_div {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 525px;
+    height: 40px;
+}
