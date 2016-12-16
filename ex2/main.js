@@ -1,21 +1,7 @@
 var login_div = document.createElement("DIV");   
-var profile_div = document.createElement("DIV");         
+var profile_div = document.createElement("DIV");
+var calc_div = document.createElement("DIV");
 
-
-function profile_page(){
-	var myTable = document.createElement("TABLE");
-    myTable.setAttribute("id", "myTable");
-    document.body.appendChild(x);
-
-    var y = document.createElement("TR");
-    y.setAttribute("id", "myTr");
-    document.getElementById("myTable").appendChild(y);
-
-    var z = document.createElement("TD");
-    var t = document.createTextNode("cell");
-    z.appendChild(t);
-    document.getElementById("myTr").appendChild(z);
-}
 
 
 function login_page(){
@@ -61,6 +47,92 @@ function check_login_usr_pass(usr,pass){
     }
 
 }
-  
-login_page()
+
+function profile_page(){
+    profile_div.setAttribute("id", "profile_div");
+    var profile_head = document.createElement("h2");
+    profile_head.textContent = "Raphael's Page"
+    profile_head.setAttribute("id", "profile_head");
+    profile_div.appendChild(profile_head)
+
+	var table = document.createElement("TABLE")
+    table.setAttribute("id", "myTable");
+
+    var tblHead = document.createElement("thead");
+
+
+    var Headers = ["Picture", "ID", "Name", "link", "Interesting stuff on me"];
+
+    var rowHead = document.createElement("tr");
+    for (var i = 0; i < 5; i++) {
+        var cell = document.createElement("th");
+        cell.setAttribute("id", "table_head");
+        var cellText = document.createTextNode(Headers[i]);
+        cell.appendChild(cellText);
+        rowHead.appendChild(cell);
+    }
+    tblHead.appendChild(rowHead);
+
+
+    var tblBody = document.createElement("tbody");
+
+
+    var rowBody = document.createElement("tr");
+    var pic_td = document.createElement("td");
+    pic_td.setAttribute("id", "table_body");
+    var id_td = document.createElement("td");
+    id_td.setAttribute("id", "table_body");
+    var name_td = document.createElement("td");
+    name_td.setAttribute("id", "table_body");
+    var link_td = document.createElement("td");
+    link_td.setAttribute("id", "table_body");
+    var fact_td = document.createElement("td");
+    fact_td.setAttribute("id", "table_body");
+
+    var myProImg = document.createElement("IMG");
+    myProImg.setAttribute("id", "myProImg");
+    myProImg.setAttribute("src", "refi.jpg");
+    pic_td.appendChild(myProImg);
+    id_td.appendChild(document.createTextNode("305079030"));
+    name_td.appendChild(document.createTextNode("Raphael Peretz"));
+
+
+    var myLinkImg = document.createElement("IMG");
+    myLinkImg.setAttribute("id", "myLinkImg");
+    myLinkImg.setAttribute("src", "ninegag.png");
+
+    var ninegag_link = document.createElement('a');
+    ninegag_link.appendChild(myLinkImg)
+    ninegag_link.href = "http://www.9gag.com";
+    link_td.appendChild(ninegag_link);
+
+    fact_td.appendChild(document.createTextNode("I am getting married in 3 months"));
+
+    rowBody.appendChild(pic_td)
+    rowBody.appendChild(id_td)
+    rowBody.appendChild(name_td)
+    rowBody.appendChild(link_td)
+    rowBody.appendChild(fact_td)
+
+    tblBody.appendChild(rowBody)
+
+    table.appendChild(tblHead);
+    table.appendChild(tblBody);
+    var table_title = document.createElement("h4");
+    table_title.textContent = "Personal info"
+    table_title.setAttribute("id", "table_title");
+    profile_div.appendChild(table_title)
+    profile_div.appendChild(table)
+
+    document.body.appendChild(profile_div);
+
+
+}
+
+window.onload = function() {
+
+    login_page();
+    profile_page();
+
+}
    
