@@ -1,6 +1,7 @@
 var login_div = document.createElement("DIV");   
 var profile_div = document.createElement("DIV");
 var calc_div = document.createElement("DIV");
+var calcCounter = 0;
 
 
 
@@ -11,7 +12,8 @@ function login_page(){
 	var login_head = document.createElement("h1");
 	var logInBtn = document.createElement("button");
     logInBtn.setAttribute("id", "logInBtn");
-	login_head.textContent = "Please login\n"
+    login_head.setAttribute("id", "login_head");
+	login_head.textContent = "Please login\n";
 	var login_input_user = document.createElement("INPUT"); 
 	var login_input_password = document.createElement("INPUT");
 	
@@ -170,13 +172,13 @@ function curDisplayCalc(displayToUpdateId, toDisplay) {
 }
 
 
-var calcSerialNum = 0; //serial number for calculators
+
 
 function Calc() {
 
-    var calc = document.createElement("div");
-    var num = calcSerialNum++;
-    calc.setAttribute("id", "calc_body");
+    var calc_body = document.createElement("div");
+    var num = calcCounter++;
+    calc_body.setAttribute("id", "calc_body");
     var calcTable = document.createElement("table");
     calcTable.setAttribute("id", "tableOfCalc");
 
@@ -216,14 +218,14 @@ function Calc() {
         }
         calcTable.appendChild(row);
     }
-    calc.appendChild(calcTable);
-    calc_div.appendChild(calc);
+    calc_body.appendChild(calcTable);
+    calc_div.appendChild(calc_body);
 }
 
 /**
  * add another calculator to the calculator screen.
  */
-var addCalc = function() {
+function addCalc() {
     new Calc();
 }
 
