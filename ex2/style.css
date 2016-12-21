@@ -189,7 +189,7 @@ body {
     display: inline;
     width: 300px;
     border: 5px solid green;
-    padding-top: 15px;
+    padding-top: 12px;
     padding-bottom: 180px;
     padding-right: 0px;
     padding-left: 0%;
@@ -207,7 +207,7 @@ body {
 
 }
 
-#tableOfCalc {
+#calcTable {
     display: inline;
 }
 
